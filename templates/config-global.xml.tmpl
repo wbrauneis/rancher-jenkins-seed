@@ -9,8 +9,8 @@
    <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
  </authorizationStrategy>
  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.13">
-   <server>{if exists "/self/service/metadata/seed/ldapserver"}}{{getv "/self/service/metadata/seed/ldapserver"}}{{end}}</server>
-   <rootDN>{if exists "/self/service/metadata/seed/ldaprootdn"}}{{getv "/self/service/metadata/seed/ldaprootdn"}}{{end}}</rootDN>
+   <server>{{if exists "/self/service/metadata/seed/ldapserver"}}{{getv "/self/service/metadata/seed/ldapserver"}}{{end}}</server>
+   <rootDN>{{if exists "/self/service/metadata/seed/ldaprootdn"}}{{getv "/self/service/metadata/seed/ldaprootdn"}}{{end}}</rootDN>
    <inhibitInferRootDN>false</inhibitInferRootDN>
    <userSearchBase>ou=people</userSearchBase>
    <userSearch>uid={0}</userSearch>

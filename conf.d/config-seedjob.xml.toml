@@ -1,6 +1,6 @@
 [template]
 src="config-seedjob.xml.tmpl"
-dest="/usr/share/jenkins/ref/jobs/Seed/config.xml"
+dest="/usr/share/jenkins/rancher-seed/jobs/Seed/config.xml"
 keys= [
   "/self/service/metadata/seed",
 ]
