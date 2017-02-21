@@ -1,3 +1,0 @@
-# rancher-jenkins-seed
-
-TBD

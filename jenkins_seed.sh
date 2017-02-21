@@ -1,8 +1,20 @@
 #!/bin/bash
 
 
-while [ ! -f /var/jenkins_home/jobs/Seed/config.xml ]; do
+while [ ! -f /usr/share/jenkins/rancher-seed/config.xml ]; do
     sleep 1
 done
 
-exec /bin/tini -- /usr/local/bin/jenkins.sh
+while [ ! -f /usr/share/jenkins/rancher-seed/jobs/Seed/config.xml ]; do
+    sleep 1
+done
+
+while [ ! -f /usr/share/jenkins/rancher-seed/credentials.xml ]; do
+    sleep 1
+done
+
+while [ ! -f /usr/share/jenkins/rancher-seed/.ssh/id_rsa ]; do
+    sleep 1
+done
+
+exec /bin/tini -- /usr/share/jenkins/rancher/jenkins.sh
