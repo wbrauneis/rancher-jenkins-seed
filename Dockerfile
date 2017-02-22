@@ -4,6 +4,10 @@ ADD ./conf.d /etc/confd/conf.d
 ADD ./templates /etc/confd/templates
 
 ADD ./jenkins_seed.sh /usr/share/jenkins/rancher-seed/jenkins.sh
+
+ADD ./noop.txt /usr/share/jenkins/rancher-seed/.ssh
+ADD ./noop.txt /usr/share/jenkins/rancher-seed/jobs/Seed
+
 VOLUME /usr/share/jenkins/rancher-seed
 
 ENTRYPOINT ["/confd"]
