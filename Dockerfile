@@ -5,8 +5,8 @@ ADD ./templates /etc/confd/templates
 
 ADD ./jenkins_seed.sh /usr/share/jenkins/rancher-seed/jenkins.sh
 
-ADD ./noop.txt /usr/share/jenkins/rancher-seed/.ssh
-ADD ./noop.txt /usr/share/jenkins/rancher-seed/jobs/Seed
+ADD ./noop.txt /usr/share/jenkins/rancher-seed/.ssh/noop.txt
+ADD ./noop.txt /usr/share/jenkins/rancher-seed/jobs/Seed/noop.txt
 
 VOLUME /usr/share/jenkins/rancher-seed
 
