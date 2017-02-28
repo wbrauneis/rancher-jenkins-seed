@@ -51,5 +51,33 @@
    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
  </crumbIssuer>
  <nodeProperties/>
+ {{if exists "/self/service/metadata/jenkinsenv"}}
+ <globalNodeProperties>
+    <hudson.slaves.EnvironmentVariablesNodeProperty>
+      <envVars serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          {{$jenkinsenvironments := ls "/self/service/metadata/jenkinsenv"}}
+          <int>{{len $jenkinsenvironments}}</int>
+          {{range $env := $jenkinsenvironments}}
+            {{$envKeyVal := split $env "=" }}
+              <string>envKeyVal[0]</string>
+              <string>envKeyVal[1]</string>
+          {{end}}
+        </tree-map>
+      </envVars>
+    </hudson.slaves.EnvironmentVariablesNodeProperty>
+ </globalNodeProperties>
+ {{else}}
  <globalNodeProperties/>
+ {{end}}
 </hudson>
+
+
+
+
+
+
