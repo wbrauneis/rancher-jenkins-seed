@@ -1,0 +1,6 @@
+[template]
+src="hudson.tasks.Mailer.xml.tmpl"
+dest="/usr/share/jenkins/rancher-seed/hudson.tasks.Mailer.xml"
+keys= [
+  "/self/service/metadata/seed",
+]
