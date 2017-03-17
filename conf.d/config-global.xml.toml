@@ -1,7 +1,0 @@
-[template]
-src="config-global.xml.tmpl"
-dest="/usr/share/jenkins/rancher-seed/config.xml"
-keys= [
-  "/self/service/metadata/seed",
-  "/self/service/metadata/jenkinsenv",
-]

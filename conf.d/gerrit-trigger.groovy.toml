@@ -1,0 +1,6 @@
+[template]
+src="gerrit-trigger.groovy.tmpl"
+dest="/usr/share/jenkins/rancher-seed/init.groovy.d/gerrit-trigger.groovy"
+keys= [
+  "/self/service/metadata/seed",
+]

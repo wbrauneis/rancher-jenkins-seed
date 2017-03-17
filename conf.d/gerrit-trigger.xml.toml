@@ -1,6 +1,0 @@
-[template]
-src="gerrit-trigger.xml.tmpl"
-dest="/usr/share/jenkins/rancher-seed/gerrit-trigger.xml"
-keys= [
-  "/self/service/metadata/seed",
-]
