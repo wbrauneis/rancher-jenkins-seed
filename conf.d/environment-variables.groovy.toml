@@ -1,6 +1,6 @@
 [template]
 src="environment-variables.groovy.tmpl"
-dest="/usr/share/jenkins/rancher-seed/init.groovy.d/environment-variables.groovy"
+dest="/usr/share/jenkins/rancher-seed/init.groovy.d/emundo-environment-variables.groovy"
 keys= [
   "/self/service/metadata/seed",
 ]
