@@ -10,28 +10,8 @@ while [ ! -f /usr/share/jenkins/rancher-seed/.ssh/id_rsa ]; do
     sleep 1
 done
 
-while [ ! -f /usr/share/jenkins/rancher-seed/init.groovy.d/jenkins-credentials.groovy ]; do
-    echo 'init.groovy.d/jenkins-credentials.groovy not found!'
-    sleep 1
-done
-
-while [ ! -f /usr/share/jenkins/rancher-seed/init.groovy.d/emundo-ad.groovy ]; do
-    echo 'init.groovy.d/emundo-ad.groovy not found!'
-    sleep 1
-done
-
-while [ ! -f /usr/share/jenkins/rancher-seed/init.groovy.d/emundo-environment-variables.groovy ]; do
-    echo 'init.groovy.d/emundo-environment-variables.groovy not found!'
-    sleep 1
-done
-
-while [ ! -f /usr/share/jenkins/rancher-seed/init.groovy.d/emundo-gerrit-trigger.groovy ]; do
-    echo 'init.groovy.d/emundo-gerrit-trigger.groovy not found!'
-    sleep 1
-done
-
-while [ ! -f /usr/share/jenkins/rancher-seed/init.groovy.d/emundo-mail.groovy ]; do
-    echo 'init.groovy.d/emundo-mail.groovy not found!'
+while [ ! -f /usr/share/jenkins/rancher-seed/init.groovy.d/config.groovy ]; do
+    echo 'init.groovy.d/config.groovy not found!'
     sleep 1
 done
 
